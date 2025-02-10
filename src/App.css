@@ -1,0 +1,376 @@
+/* General Styles */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: #333;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Navbar */
+.navbar {
+  background: #333;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar .logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.navbar .nav-links {
+  display: flex;
+  align-items: center;
+}
+
+.navbar .nav-links a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 15px;
+  font-weight: bold;
+}
+
+.navbar .nav-links a:hover {
+  color: #00bcd4;
+}
+
+/* Hamburger Menu */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.hamburger span {
+  background: #fff;
+  height: 3px;
+  width: 25px;
+  margin: 4px 0;
+}
+
+.nav-links-mobile {
+  display: none;
+  flex-direction: column;
+  background: #333;
+  position: absolute;
+  top: 60px;
+  right: 20px;
+  width: 200px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.nav-links-mobile a {
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-bottom: 1px solid #444;
+}
+
+.nav-links-mobile a:last-child {
+  border-bottom: none;
+}
+
+.nav-links-mobile a:hover {
+  background: #444;
+}
+
+.show {
+  display: flex;
+}
+
+/* Responsive Navbar */
+@media (max-width: 768px) {
+  .nav-links a{
+    display: none;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+}
+
+/* Sections */
+.section {
+  padding: 50px 20px;
+  text-align: center;
+  height: 65vh;
+}
+
+.coming-soon {
+  background-image: url('static/comingsoon.jpg');
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  padding: 100px 20px;
+}
+
+.about-us {
+  background: #eaeaea;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding: 50px 20px;
+  gap: 20px; /* Adds spacing between elements */
+}
+
+.about-us .about-left,
+.about-us .about-right {
+  flex: 1;
+  padding: 20px;
+  max-width: 50%; /* Default behavior for larger screens */
+}
+
+.about-us .about-left img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.about-us .about-right h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.about-us .about-right p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #666;
+}
+
+/* Responsive Design for Smaller Devices */
+@media (max-width: 768px) {
+  .about-us {
+    flex-direction: column; /* Stack content vertically */
+    align-items: flex-start; /* Align text content to the left */
+  }
+
+  .about-us .about-left {
+    display: none; /* Hide the image section on small devices */
+  }
+
+  .about-us .about-right {
+    max-width: 100%; /* Allow full width for the right content */
+    text-align: left; /* Align text to the left for better readability */
+    margin: 0; /* Remove default padding or margins */
+  }
+
+  .about-us .about-right h2 {
+    font-size: 1.5rem; /* Adjust heading size */
+  }
+
+  .about-us .about-right p {
+    font-size: 0.9rem; /* Adjust paragraph size */
+    color: #444; /* Use slightly darker text color for better contrast */
+  }
+}
+
+/* Team Section */
+.team {
+  background: #eaeaea;
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.team h2 {
+  font-size: 2rem;
+  margin-bottom: 30px;
+  color: #333;
+}
+
+.team-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap; /* Allows wrapping on smaller devices */
+  gap: 20px; /* Adds spacing between team members */
+}
+
+.team-member {
+  flex: 1;
+  max-width: 30%; /* Ensures 3 members fit in a row */
+  background: #fff;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s;
+}
+
+.team-member:hover {
+  transform: scale(1.05); /* Slight zoom on hover */
+}
+
+.team-member img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  margin-bottom: 15px;
+  object-fit: cover;
+}
+
+.team-member h3 {
+  font-size: 1.2rem;
+  margin: 10px 0;
+  color: #333;
+}
+
+.team-member p {
+  font-size: 1rem;
+  color: #666;
+}
+
+.social-icons {
+  margin-top: 10px;
+}
+
+.social-icons a {
+  margin: 0 8px;
+  color: #666;
+  font-size: 1.2rem;
+  transition: color 0.3s;
+}
+
+.social-icons a:hover {
+  color: #00bcd4;
+}
+
+/* Responsive Team Section */
+@media (max-width: 768px) {
+  .team-container {
+    flex-direction: column; /* Stack members vertically on smaller devices */
+    gap: 20px;
+  }
+
+  .team-member {
+    max-width: 100%; /* Full width for small screens */
+  }
+}
+
+
+/* Google Map Section */
+.map {
+  background: #eaeaea;
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.map h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.map iframe {
+  width: 100%;
+  height: 400px;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive Map Height */
+@media (max-width: 768px) {
+  .map iframe {
+    height: 300px; /* Adjust height for smaller devices */
+  }
+}
+
+.contact-us {
+  background-image:url(static/contact.webp) ;
+}
+
+/* Form Styles */
+form {
+  max-width: 700px;
+  margin: 0 auto;
+  background: #fff;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 95%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+button {
+  background: #00bcd4;
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+button:hover {
+  background: #019aaa;
+}
+
+/* Footer */
+.footer {
+  background: #333;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.footer-content p,
+.footer-content address {
+  margin: 5px 0;
+}
+
+.footer-content address {
+  font-style: normal; /* Removes default italic styling for better readability */
+}
+
+/* Responsive Footer */
+@media (max-width: 768px) {
+  .footer {
+    font-size: 0.8rem; /* Slightly reduce font size for smaller devices */
+    padding: 15px;
+  }
+
+  .footer-content p,
+  .footer-content address {
+    text-align: center; /* Keep text centered */
+    margin: 8px 0;
+  }
+}
+
