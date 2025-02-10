@@ -110,13 +110,24 @@ body {
 }
 
 .coming-soon {
-  background-image: url('static/comingsoon.jpg');
+  /* background-image: url('static/comingsoon.jpg'); */
+  background-color: blue;
   background-size: cover;
   background-position: center;
   color: #fff;
   padding: 100px 20px;
 }
+.coming-soon h1{
+  font-family: sans-serif;
+  font-size: 5em;
+  color: white;
+}
 
+.coming-soon p{
+  font-size: 2em;
+  font-family: sans-serif;
+  color: white;
+}
 .about-us {
   background: #eaeaea;
   display: flex;
